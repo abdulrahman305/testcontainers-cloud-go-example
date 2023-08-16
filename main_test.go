@@ -47,9 +47,10 @@ func TestTestcontainersCloud(t *testing.T) {
 	}
 
 	expectedRuntime := "Testcontainers Cloud"
-	if containsCloud {
+	if !containsCloud {
 		expectedRuntime = info.OperatingSystem
-	} else if containsDesktop {
+	}
+	if containsDesktop {
 		expectedRuntime = "via Testcontainers Desktop app"
 	}
 
