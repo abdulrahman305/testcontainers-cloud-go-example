@@ -51,7 +51,7 @@ func TestTestcontainersCloud(t *testing.T) {
 		expectedRuntime = info.OperatingSystem
 	}
 	if containsDesktop {
-		expectedRuntime += "via Testcontainers Desktop app"
+		expectedRuntime += " via Testcontainers Desktop app"
 	}
 
 	fmt.Printf(logo, expectedRuntime)
